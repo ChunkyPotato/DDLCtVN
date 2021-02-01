@@ -3,3 +3,5 @@ firstrun
 fonts.rpa
 images.rpa
 python-packages/
+cache/
+*.rpyc
