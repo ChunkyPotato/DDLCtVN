@@ -1623,16 +1623,20 @@ label sayoriroute:
         mc "S-Sayori...?"
         s 4bx "Maybe I can put what Yuri taught me to good use~!"
         "I gulp. What did Yuri teach her?"
-        window hide
+        # window hide
         stop music fadeout 2.0
-        play music tbc
-        pause 2.902
-        show sayori 7a at t11 zorder 2
-        show tbc at r11 zorder 2
-        show image "mod_assets/pink.png"
-        pause 10.0
         scene black
         with dissolve_scene_full
+        jump Sayori2
+        # play music tbc
+        # pause 2.902
+        # show sayori 7a at t11 zorder 2
+        # show tbc at r11 zorder 2
+        # show image "mod_assets/pink.png"
+        # pause 10.0
+        # scene black
+        # with dissolve_scene_full
+        
 
     elif SayoriVar >= 0:
         "We continue to watch the show."

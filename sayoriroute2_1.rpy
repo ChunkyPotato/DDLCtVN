@@ -1,10 +1,11 @@
 label Sayori2:
-    
-    call Scene1
+
+    $ SayoriVar2 = 0    
+    call Sayori_2_1
 
     return
 
-label Scene1:
+label Sayori_2_1:
     scene bg bedroom
     with wipeleft
 
@@ -16,6 +17,7 @@ label Scene1:
     "It’s been 4 months since Sayori and I..."
     "You know..."
     "...Anyways, after what happened last night, I really should do something nice for her."
+    "[SayoriVar2]"
     "I’ll make her breakfast in bed! I hope she’ll like it."
 
     scene bg kitchen
