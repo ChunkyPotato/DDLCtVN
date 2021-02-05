@@ -430,8 +430,6 @@ label Sayori_2_1:
     "Even though I only recently saw Sayori as more than a friend…"
     "I feel like I always have, and just now realized."
 
-    # TODO: Figure out what the @ is supposed to mean
-
     # show sayori 1@d at t11 zorder 2
     s 2d1 "Thank you, for a wonderful date."
     # show sayori 1@d at t11 zorder 2
@@ -609,8 +607,6 @@ label Sayori_2_1:
             scene bg bedroom
             with wipeleft_scene
 
-            # TODO: Figure out what the & means.
-
             "We begin playing Battleship, and true to the rules we’ve established, each time I get a ship sunk, I have to take something off, and every time Sayori loses a ship, she also has to take something off."
             "It ends up being a lot more fun than I expected, and despite the circumstances, the sexuality of the situation kinda gets diffused by how much fun we’re having picking on each other."
             "That is until I notice Sayori has nothing but her bra and panties on, and I sink her aircraft carrier."
@@ -659,7 +655,7 @@ label Sayori_2_1:
             # show sayori 2&a at t11 zorder 2
             mc "What?!?!"
             # s 1&x "Let’s get dressed again, [player], we got homework to do."
-            show sayori 1 & a at t11 zorder 2
+            show sayori 1&a at t11 zorder 2
             "..."
             "I hate everything about this."
             "I didn’t even wanna take things too far tonight, but it’s hard to ignore my urges when you’re so close to the light at the end of the tunnel!"
@@ -702,7 +698,7 @@ label Sayori_2_1:
 
 
             scene black
-            with dissolve_scene_full_
+            with dissolve_scene_full
 
             "Suddenly, I feel my lips against hers."
             "But I was the one to pull her in for the kiss this time."#(keep this)
