@@ -733,6 +733,8 @@ screen poem(currentpoem, paper="paper"):
                 text "[currentpoem.title]\n\n[currentpoem.text]" style "natsuki_text"
             elif currentpoem.author == "monika":
                 text "[currentpoem.title]\n\n[currentpoem.text]" style "monika_text"
+            elif currentpoem.author == "mc":
+                text "[currentpoem.title]\n\n[currentpoem.text]" style "mc_text"
             null height 100
     vbar value YScrollValue(viewport="vp") style "poem_vbar"
 
@@ -790,6 +792,12 @@ style sayori_text:
 style monika_text:
     font "gui/font/m1.ttf"
     size 34
+    color "#000"
+    outlines []
+
+style mc_text:
+    font "mod_assets/Chunkster.ttf"
+    size 28
     color "#000"
     outlines []
 

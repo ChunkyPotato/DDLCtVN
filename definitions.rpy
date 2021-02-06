@@ -83,8 +83,6 @@ define audio.t5_monika = "<loop 4.444>bgm/5_monika.ogg"
 define audio.t5_sayori = "<loop 4.444>bgm/5_sayori.ogg"
 define audio.t5_natsuki = "<loop 4.444>bgm/5_natsuki.ogg"
 define audio.t5_yuri = "<loop 4.444>bgm/5_yuri.ogg"
-define audio.tbc = "mod_assets/tbc.ogg"
-define audio.monikasong = "mod_assets/monikasong.ogg"
 
 # Backgrounds
 image black = "#000000"
@@ -115,7 +113,7 @@ image bg club_day2:
 image bg closet = "bg/closet.png"
 image bg bedroom = "bg/bedroom.png"
 image bg sayori_bedroom = "bg/sayori_bedroom.png"
-image bg livingroom = "mod_assets/livingroom.png"
+
 image bg house = "bg/house.png"
 image bg kitchen = "bg/kitchen.png"
 
@@ -212,7 +210,6 @@ image sayori 1a = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "say
 image sayori 1b = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/b.png")
 image sayori 1c = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/c.png")
 image sayori 1d = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/d.png")
-image sayori 1d1 = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "mod_assets/Sayonnaise/d1.png")
 image sayori 1e = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/e.png")
 image sayori 1f = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/f.png")
 image sayori 1g = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/g.png")
@@ -240,7 +237,6 @@ image sayori 2a = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "say
 image sayori 2b = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/b.png")
 image sayori 2c = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/c.png")
 image sayori 2d = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/d.png")
-image sayori 2d1 = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "mod_assets/Sayonnaise/d1.png")
 image sayori 2e = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/e.png")
 image sayori 2f = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/f.png")
 image sayori 2g = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/g.png")
@@ -268,7 +264,6 @@ image sayori 3a = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "say
 image sayori 3b = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/b.png")
 image sayori 3c = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/c.png")
 image sayori 3d = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/d.png")
-image sayori 3d1 = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "mod_assets/Sayonnaise/d1.png")
 image sayori 3e = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/e.png")
 image sayori 3f = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/f.png")
 image sayori 3g = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/g.png")
@@ -296,7 +291,6 @@ image sayori 4a = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "say
 image sayori 4b = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/b.png")
 image sayori 4c = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/c.png")
 image sayori 4d = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/d.png")
-image sayori 4d1 = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "mod_assets/Sayonnaise/d1.png")
 image sayori 4e = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/e.png")
 image sayori 4f = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/f.png")
 image sayori 4g = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/g.png")
@@ -429,7 +423,7 @@ image sayori 4bw = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "s
 image sayori 4bx = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/x.png")
 image sayori 4by = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/y.png")
 
-image sayori 7a = "mod_assets/sEnd.png"
+
 
 image sayori glitch:
     "sayori/glitch1.png"
@@ -758,10 +752,9 @@ image natsuki 5bx = im.Composite((960, 960), (18, 22), "natsuki/x.png", (0, 0), 
 image natsuki 5by = im.Composite((960, 960), (18, 22), "natsuki/y.png", (0, 0), "natsuki/3b.png")
 image natsuki 5bz = im.Composite((960, 960), (18, 22), "natsuki/z.png", (0, 0), "natsuki/3b.png")
 
-image natsuki 6ba = im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "mod_assets/natsleep2.png")
-image natsuki 6bb = im.Composite((960, 960), (0, 0), "natsuki/2bl.png", (0, 0), "natsuki/2br.png", (0, 0), "mod_assets/natsleep.png")
 
-image natsuki 7a = "mod_assets/nEnd.png"
+
+
 
 # Natsuki legacy
 image natsuki 1 = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/1t.png")
@@ -1049,7 +1042,7 @@ image yuri 4bc = im.Composite((960, 960), (0, 0), "yuri/c2.png", (0, 0), "yuri/3
 image yuri 4bd = im.Composite((960, 960), (0, 0), "yuri/d2.png", (0, 0), "yuri/3b.png")
 image yuri 4be = im.Composite((960, 960), (0, 0), "yuri/e2.png", (0, 0), "yuri/3b.png")
 
-image yuri 7a = "mod_assets/yEnd.png"
+
 
 
 image y_glitch_head:
@@ -1248,89 +1241,7 @@ image monika 4r = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "mon
 image monika 5a = im.Composite((960, 960), (0, 0), "monika/3a.png")
 image monika 5b = im.Composite((960, 960), (0, 0), "monika/3b.png")
 
-image monika 1bb = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/a.png")
-image monika 2bb = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/a.png")
-image monika 3bb = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/a.png")
-image monika 4bb = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/a.png")
 
-
-image monika 1ba = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/a.png")
-image monika 1bb = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/b.png")
-image monika 1bc = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/c.png")
-image monika 1bd = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/d.png")
-image monika 1be = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/e.png")
-image monika 1bf = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/f.png")
-image monika 1bg = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/g.png")
-image monika 1bh = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/h.png")
-image monika 1bi = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/i.png")
-image monika 1bj = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/j.png")
-image monika 1bk = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/k.png")
-image monika 1bl = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/l.png")
-image monika 1bm = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/m.png")
-image monika 1bn = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/n.png")
-image monika 1bo = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/o.png")
-image monika 1bp = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/p.png")
-image monika 1bq = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/q.png")
-image monika 1br = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/r.png")
-
-image monika 2ba = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/a.png")
-image monika 2bb = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/b.png")
-image monika 2bc = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/c.png")
-image monika 2bd = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/d.png")
-image monika 2be = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/e.png")
-image monika 2bf = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/f.png")
-image monika 2bg = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/g.png")
-image monika 2bh = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/h.png")
-image monika 2bi = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/i.png")
-image monika 2bj = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/j.png")
-image monika 2bk = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/k.png")
-image monika 2bl = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/l.png")
-image monika 2bm = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/m.png")
-image monika 2bn = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/n.png")
-image monika 2bo = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/o.png")
-image monika 2bp = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/p.png")
-image monika 2bq = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/q.png")
-image monika 2br = im.Composite((960, 960), (0, 0), "mod_assets/1bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/r.png")
-
-image monika 3ba = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/a.png")
-image monika 3bb = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/b.png")
-image monika 3bc = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/c.png")
-image monika 3bd = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/d.png")
-image monika 3be = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/e.png")
-image monika 3bf = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/f.png")
-image monika 3bg = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/g.png")
-image monika 3bh = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/h.png")
-image monika 3bi = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/i.png")
-image monika 3bj = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/j.png")
-image monika 3bk = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/k.png")
-image monika 3bl = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/l.png")
-image monika 3bm = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/m.png")
-image monika 3bn = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/n.png")
-image monika 3bo = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/o.png")
-image monika 3bp = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/p.png")
-image monika 3bq = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/q.png")
-image monika 3br = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/1br.png", (0, 0), "monika/r.png")
-
-image monika 4ba = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/a.png")
-image monika 4bb = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/b.png")
-image monika 4bc = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/c.png")
-image monika 4bd = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/d.png")
-image monika 4be = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/e.png")
-image monika 4bf = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/f.png")
-image monika 4bg = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/g.png")
-image monika 4bh = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/h.png")
-image monika 4bi = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/i.png")
-image monika 4bj = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/j.png")
-image monika 4bk = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/k.png")
-image monika 4bl = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/l.png")
-image monika 4bm = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/m.png")
-image monika 4bn = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/n.png")
-image monika 4bo = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/o.png")
-image monika 4bp = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/p.png")
-image monika 4bq = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/q.png")
-image monika 4br = im.Composite((960, 960), (0, 0), "mod_assets/2bl.png", (0, 0), "mod_assets/2br.png", (0, 0), "monika/r.png")
-
-image monika 8a = "mod_assets/mEnd.png"
 
 
 image monika g1:
@@ -1375,7 +1286,7 @@ image monika g2:
             pause 0.2
     repeat
 
-image tbc = "mod_assets/tbc.png"
+
 
 
 # Character variables
@@ -1388,8 +1299,6 @@ define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix
 define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 define _dismiss_pause = config.developer
-
-define tbc = DynamicCharacter('tbc', image='tbc', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 default persistent.playername = ""
 default player = persistent.playername

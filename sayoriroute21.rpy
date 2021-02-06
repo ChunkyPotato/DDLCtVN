@@ -1,11 +1,13 @@
 label Sayori2:
 
     $ SayoriVar2 = 0    
-    call Sayori_2_1
+    $ observant_s21 = False
+    call Sayori_21
+    call Sayori_22
 
     return
 
-label Sayori_2_1:
+label Sayori_21:
 
     scene bg bedroom
     with wipeleft
@@ -23,7 +25,9 @@ label Sayori_2_1:
     scene bg kitchen
     with wipeleft
 
-    "Hmm, what should I make? Or, better yet, what do I have?"
+    "Hmm, what should I make?"
+    "Uh... what do I have?"
+    "After a little aimless searching, I find a half-empty bag of chocolate chips."
     "Sayori likes chocolate chip pancakes, right?"
     "I rummage through my cabinets for some pancake batter."
     mc "Jackpot!"
@@ -160,26 +164,37 @@ label Sayori_2_1:
     show sayori at thide zorder 1
     hide sayori
 
-    "If you're seeing this, ping ChunkyPotato#1769 and tell him to screw himself cuz he forgot to code in the note again."
-    # Paper effect, note appears similar to the poems in the base game
-    # (on note)
-    # Hey[player],
-    # Thanks for a wonderful Sunday evening! Oh, and for letting me sleep over and making me breakfast! I really just wanted to say that I’m really looking forward to tonight! I hope it’s just as fun as last night!;)
-    #     - Love,
-    #     Sayori < 3
-    #     P.S: Where are we going for the date?
+    python:
+        s21_poem1 = Poem(
+        author = "sayori",
+        title = "Hey {},".format(player),
+        text = """\
+Thanks for a wonderful Sunday evening! Oh, and for letting me sleep over and making me \
+breakfast! I really just wanted to say that I’m really looking forward to tonight! \
+I hope it’s just as fun as last night!;)
+    
+    - Love,
+    Sayori <3
 
-    #     After the note is clicked away, Sayori’s sprite disappears again
+P.S: Where are we going for the date?"""
+        )
+
+    call showpoem(s21_poem1, music=False) # from _call_showpoem_s2_1_1
 
     "I look back at her."
     "She’s writing in her notebook like nothing happened."
     "I decide to write back to her."
 
-    "If you're seeing this, tell him (ChunkyPotato#1769) he forgot the other note as well."
-    # MCs note;
-
-    # Well if I tell you THAT, it’ll ruin the surprise! Just wait patiently for the time to come, I promise it’ll be worth it.
-    # [Player name]
+    python:
+        s21_poem2 = Poem(
+        author = "mc",
+        title = "",
+        text = """\
+Well if I tell you THAT, it’ll ruin the surprise! Just wait patiently for the time to come, \
+I promise it’ll be worth it."""
+        )
+    
+    call showpoem(s21_poem2, music=False) # from _call_showpoem_s2_1_1
 
     "I slide the note to her just like she did."
     "I watch as she reads the note."
@@ -216,7 +231,7 @@ label Sayori_2_1:
             mc "It's a place where you can drink hot cocoa."
             s 1m "Oh!"
             s "I get it now!"
-            show sayori wink at t1 zorder 2
+            show sayori wink at t11 zorder 2
             s 1m "..."
             s 5d "..."
             "She whispers"
@@ -242,22 +257,25 @@ label Sayori_2_1:
     "There’s a note on the door."
     "It's from Monika."
     "I take the note out of the door to read it."
+    
+    python:
+        #we need to make a seperate .rpy for this poem
+        #also we may need to put all the directions for poems, cause i have no idea what im doing-jan
+        s21_poem3 = Poem(
+        author = "monika",
+        title = "Literature Club Cancelled",
+        text = """\
+Dear Sayori, Yuri, Natsuki, and {},
 
-    show poem(poem_note)
-    "Tell chunky to read line 246 then facepalm"
-    # #we need to make a seperate .rpy for this poem
-    # #also we may need to put all the directions for poems, cause i have no idea what im doing-jan
+Sorry for not getting to you all personally, but I have to inform you that the Literature Club will \
+be cancelled today. This is due to personal reasons I am currently unable to say. \
+However the club should return tomorrow!
 
-    # poem_custom=poem
-    # author= "monika",
-    # title= "Literature Club Cancelled",
-    # text= ""\
-    # Dear Sayori, Yuri, Natsuki, and [player],
+Sincerely,
+    Monika""".format(player)
+        )
 
-    # #Sorry for not getting to you all personally, but I have to inform you that the Literature Club will be cancelled today. This is due to personal reasons I am currently unable to say. However the club should return tomorrow!
-
-    # #Sincerely,
-    #     #Monika
+    call showpoem(s21_poem3, music=False)
 
     show sayori 1b at t11 zorder 2
     s "Well? What does it say?"
@@ -281,9 +299,11 @@ label Sayori_2_1:
 
 
     scene bg house
-    with wiperight_scene
+    with wipeleft_scene
 
-    s 1c "Hey, just to let you know, I may take a bit to get ready."
+    show sayori 1c at t11 zorder 2
+
+    s "Hey, just to let you know, I may take a bit to get ready."
     s 1d "Just meet me there, okay?"
     s "If I’m not there in time, just get me a big hot cocoa with whipped cream, alright?"
     mc "Duly noted."
@@ -305,7 +325,7 @@ label Sayori_2_1:
     "I also realize that this is our first \"official\" date, since the festival didn’t turn out too well, and I don’t count her coming to my place every Sunday as dates."
 
 
-    scene bg black
+    scene black
     with dissolve_scene_full
 
     "As I lose myself in thought, I’m suddenly jolted back to reality as a pair of hands cover my eyes from behind."
@@ -314,6 +334,7 @@ label Sayori_2_1:
 
 
     scene bg house(unused)
+
     show sayori 1a(custom) at t11 zorder 2
     s "So, how do I look?"
     mc "You look amazing."
@@ -415,9 +436,9 @@ label Sayori_2_1:
 
 
     scene cg Sayori Custom(Afternoon)
-    with wiperight
+    with fade
 
-    #wouldn’t it be better to fade for this
+    #wouldn’t it be better to fade for this <-- yes (was wipeleft)
 
     "As we finish up our drinks, I notice that it’s getting late."
     mc "You ready to head home?"

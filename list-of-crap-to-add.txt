@@ -4,15 +4,22 @@ RANDOM NOTES:
 
 
 
+Effects:
+Eye open visual effect (Scene transition)
+    Sayo 22
+        4
+
+
+
 BG:
 
 bg(unused house)
-    Sayo 2-1
+    Sayo 21
         302
         316
 
 bg residential_day(night)
-    Sayo 2-1
+    Sayo 21
         427
 
 
@@ -20,15 +27,15 @@ bg residential_day(night)
 CG:
 
 cg custom Sayori
-    Sayo 2-1
+    Sayo 21
         328
 
 cg Sayori Custom(Afternoon)
-    Sayo 2-1
+    Sayo 21
         417
 
 cg bed sayori
-    Sayo 2-2
+    Sayo 22
         20
         30 one eye
 
@@ -36,20 +43,24 @@ cg bed sayori
 
 SPRITES:
 
+sayori wink
+    Sayo 21
+        154
+
 sayori 1X(custom)
-    Sayo 2-1
+    Sayo 21
         317 1a
         321 1q
         324 1a
 
 s(worried)      # This might just be asking to find the vanilla worried sprite...
-    Sayo 2-1
+    Sayo 21
         380
 
 sayori X@X      # Sayori in a dress for a date.
-    Sayo 2-1
+    Sayo 21
         From 433
 
 sayori X&X      # Sayori playing strip battleship.
-    Sayo 2-1
+    Sayo 21
         From 623
