@@ -1,6 +1,13 @@
 RANDOM NOTES:
 - Ensure consistency in single quotes: ' vs ’
 - Ensure consistency in triple dots: ... vs …
+- the equation for you-know-what is:
+    \left(x-1\right)^{2}+y^{2}=1
+    \left(x+1\right)^{2}+y^{2}=1
+    x=1\left\{1\le y\le5\right\}
+    x=-1\left\{1\le y\le5\right\}
+    \sqrt{2-x^{2}}+5
+    y=5\left\{-\sqrt{2}\le x\le\sqrt{2}\right\}
 
 
 

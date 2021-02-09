@@ -13,6 +13,7 @@ label Sayori_21:
 
     scene bg bedroom
     with wipeleft
+    play music t5_sayori
 
     #MC wakes up
     "{i}Whew{/i}."
@@ -82,10 +83,12 @@ label Sayori_21:
     s "Okay, let’s go then!"
     show sayori at thide zorder 1
     hide sayori
+    stop music fadeout 1.5
 
 
     scene bg house
-    with wipeleft
+    with wipeleft_scene
+    play music t2
 
     show sayori 1c at t11 zorder 2
     s "[player], can I tell you about my dream last night?"
@@ -129,7 +132,7 @@ label Sayori_21:
 
 
     scene bg corridor
-    with wipeleft
+    with wipeleft_scene
 
     show sayori 1c at t11 zorder 2
     mc "Hey, Sayori?"
@@ -141,10 +144,11 @@ label Sayori_21:
     "We exchange a quick kiss on the cheeks before going to our classes."
     show sayori thide zorder 1
     hide sayori
+    stop music fadeout 1.5
 
 
     scene bg class_day
-    with wipeleft
+    with wipeleft_scene
 
     "Math."
     "One of my {i}favorite{/i} hours of the day."
@@ -208,7 +212,12 @@ I promise it’ll be worth it."""
     "I can’t begin to imagine the hell the teacher would give Sayori and I if she caught us passing notes."
     "And especially what we’re talking about in them!"
     mc "{i}Shudder{/i}"
+
+
     scene bg corridor
+    with wipeleft_scene
+    play music t3
+
     "Sayori and I head to the clubroom together like most days."
     "On our way we talk a little bit about the night ahead of us."
     show sayori 1a at t11 zorder 2
@@ -297,6 +306,7 @@ Sincerely,
     s 1r "Of course! Let’s go!"
     show sayori at thide zorder 1
     hide sayori
+    stop music fadeout 1.5
 
 
     scene bg house
@@ -322,6 +332,8 @@ Sincerely,
 
     # TODO: Add transition and fix bg house
     scene bg(unused house)
+    with wipeleft
+    play music t2
 
     "As I wait for Sayori, I find myself wondering why she wanted extra time to get ready."
     "I also realize that this is our first \"official\" date, since the festival didn’t turn out too well, and I don’t count her coming to my place every Sunday as dates."
