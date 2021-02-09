@@ -26,13 +26,9 @@ bg residential_day(night)
 
 CG:
 
-cg custom Sayori
-    Sayo 21
-        328
-
 cg Sayori Custom(Afternoon)
     Sayo 21
-        417
+        464
 
 cg bed sayori
     Sayo 22
@@ -43,24 +39,36 @@ cg bed sayori
 
 SPRITES:
 
-sayori wink
-    Sayo 21
-        154
-
 sayori 1X(custom)
     Sayo 21
         317 1a
         321 1q
         324 1a
 
-s(worried)      # This might just be asking to find the vanilla worried sprite...
-    Sayo 21
-        380
-
 sayori X@X      # Sayori in a dress for a date.
     Sayo 21
         From 433
 
+sayori 5bX
+    Sayo 21
+        From 591
+
 sayori X&X      # Sayori playing strip battleship.
     Sayo 21
         From 623
+
+
+
+DONE:
+
+sayori wink 
+    Sayo 21
+        154
+
+s(worried)      # Worried face on custom CG
+    Sayo 21
+        380
+
+cg custom Sayori
+    Sayo 21
+        328

@@ -2,6 +2,8 @@ label Sayori2:
 
     $ SayoriVar2 = 0    
     $ observant_s21 = False
+    $ battleship_played = False
+
     call Sayori_21
     call Sayori_22
 
@@ -127,7 +129,7 @@ label Sayori_21:
 
 
     scene bg corridor
-    with wiperight
+    with wipeleft
 
     show sayori 1c at t11 zorder 2
     mc "Hey, Sayori?"
@@ -142,7 +144,7 @@ label Sayori_21:
 
 
     scene bg class_day
-    with wiperight
+    with wipeleft
 
     "Math."
     "One of my {i}favorite{/i} hours of the day."
@@ -155,7 +157,7 @@ label Sayori_21:
     "{i}Huh?{/i} A Note?"
     "It's from Sayori, she slid it under my elbow while I was distracted by myself."
     "I turn to look at her."
-    show sayori wink at t11 zorder 2
+    show sayori 4wink at t11 zorder 2
     "She’s winking at me…"
     "It now suddenly feels like I’m in the Mojave desert."
     "I feel a bead of sweat form on my forehead as I recall last night’s events."
@@ -198,7 +200,7 @@ I promise it’ll be worth it."""
 
     "I slide the note to her just like she did."
     "I watch as she reads the note."
-    show sayori 3c at t11 zorder 2
+    show sayori 3i at t11 zorder 2
     "She looks my way and pouts when she’s done reading."
     show sayori at thide zorder 1
     hide sayori
@@ -217,7 +219,7 @@ I promise it’ll be worth it."""
     menu:
         "Playful":
             # I have no idea how to put points, i’ll ask skull for that -jan
-            scene bg corridor
+            # scene bg corridor # who put this here and why
             "I take a brief second to think about how to word it."
             mc "Well…"
             mc "It’s a place…"
@@ -319,6 +321,7 @@ Sincerely,
     "Following Sayori’s wishes, I head out for the cafe without her."
 
 
+    # TODO: Add transition and fix bg house
     scene bg(unused house)
 
     "As I wait for Sayori, I find myself wondering why she wanted extra time to get ready."
@@ -333,20 +336,23 @@ Sincerely,
     mc "I know it’s you, Sayori."
 
 
+    # TODO: Add transition and fix bg house
     scene bg house(unused)
 
-    show sayori 1a(custom) at t11 zorder 2
+    show sayori 1da at t11 zorder 2
     s "So, how do I look?"
     mc "You look amazing."
-    # TODO: Fix custom shiz
-    # s 1q(custom) "Really? I’m so glad!"
+    s 1dq "Really? I’m so glad!"
     mc "So should we head in?"
-    # TODO: Fix custom shiz
-    # s 1a(custom) "Yeah, let’s go!"
+    s 1da "Yeah, let’s go!"
     "We head into the cafe, which used to be a house, but was bought and repurposed.."
 
 
-    scene cg custom Sayori
+    scene s_cafe_bg
+    with dissolve_scene_full
+
+    show s_cafe h
+
     "We head up and take a seat on the terrace, where I think the view will please Sayori."
     "A waitress asks us what we want, I order a caramel latte, and Sayori gets her hot cocoa."
     "I try to think of something to say while we wait for our drinks, but nothing comes to mind."    
@@ -362,16 +368,20 @@ Sincerely,
             mc "Sayori."
             mc "I think you look nice today."
             mc "It means a lot that you dressed up and everything for this."
+            show s_cafe d# at cgfade
             s "Awww, thanks."
             s "Since this is technically our first date, I wanted it to be special."
             s "That’s why I decided to wear this old thing."
+            show s_cafe l# at cgfade
             s "I haven’t worn it since the Homecoming incident."
             mc "Homecoming incident?"
             "What does she mean by -"
             "{i}Oh.{/i}"
             "{i}That.{/i}"
             "I still have no idea how they were able to get a live squid in there…"
+            show s_cafe d# at cgfade
             s "I also convinced Yuri to give me some exotic perfume she never used."
+            show s_cafe w# at cgfade
             s "She’s really into aromatherapy or something, and said this stuff would be perfect for a date."
             s "I think it was called Jazz Man?"
 
@@ -379,13 +389,17 @@ Sincerely,
             # {NORMAL} += 0
             "I take a light whiff of the air."
             mc "Sayori?"
+            show s_cafe d# at cgfade
             s "Yes, [player]?"
             mc "Did you put on perfume for this?"
+            show s_cafe l# at cgfade
             s "Haha, yeah, I did."
+            show s_cafe d# at cgfade
             s "I thought it was appropriate for the occasion."
             s "And I wanted to try out a perfume Yuri gave me."
             s "She told me she never got to try it out, and just gave it to me!"
             s "She said it was some exotic flower."
+            show s_cafe h# at cgfade
             s "Jazz man, or something like that?"
 
         "Observant":
@@ -395,65 +409,87 @@ Sincerely,
             "I smell an unfamiliar scent in the air, it seems to be coming off of Sayori."
             "*sniff *"
             mc "You smell different than usual today Sayori, is that a new perfume?"
+            show s_cafe s# at cgfade
             s "Umm, what?"
+            show s_cafe l# at cgfade
             s "Yes...Yuri gave me one…"
             mc "Oh…"
-            s(worried) "Wait, have you memorized my ‘normal’ smell?"
+            show s_cafe s# at cgfade
+            s "Wait, have you memorized my ‘normal’ smell?"
             mc "Umm…"
+            show s_cafe d# at cgfade
             "Sayori laughs awkwardly"
+            show s_cafe h# at cgfade
             s "It’s okay, it’s nice that you have this attention to detail."
             mc "What’s the scent?"
+            show s_cafe l# at cgfade
             s "Yuri said something about a jazz man?"
             mc "Jasmine?"
             s "Yeah, that!"
-
+    
+    show s_cafe h# at cgfade
     s "So."
     s "Do you like it?"
     mc "Yeah, it suits you well."
-    s "Thanks, ehehe…"
+    
+    
 
     if observant_s21:
+        show s_cafe l# at cgfade
+        s "Thanks, ehehe…"
         "Thankfully, the waitress breaks the awkward conversation by arriving with our drinks."
     else:
+        show s_cafe w# at cgfade
+        s "Thanks, ehehe…"
+        show s_cafe s# at cgfade
         "Soon after, the waitress arrives with our drinks."
     
     mc "So how’s your day going?"
+    show s_cafe d# at cgfade
     s "My day was great!"
     "Something about the way she said that…"
     "I don’t want to pursue it, for fear of ruining the moment."
     s "I’ve been waiting for this all day!"
+    show s_cafe h# at cgfade
     mc "Me too."
     "I grasp for a topic to keep conversation from stalling."
     mc "Do you remember the day you first introduced me to the literature club?"
+    show s_cafe l# at cgfade
     s "Yeah, it seems so long ago, doesn’t it?"
     mc "It sure does."
+    show s_cafe h# at cgfade
     "We sit in silence for a moment."
     mc "Back then, "
     mc "Did you think we’d end up in this relationship?"
+    show s_cafe s# at cgfade
     s "Honestly, I thought you were probably going to end up with Monika or Yuri."
     s "But ever since we started dating…"
+    show s_cafe h# at cgfade
     s "Those rainclouds haven’t been looking so dark lately…"
 
 
-    scene cg Sayori Custom(Afternoon)
+    scene s_cafe_bg2
     with fade
 
     #wouldn’t it be better to fade for this <-- yes (was wipeleft)
 
+    show s_cafe h# at cgfade
+
     "As we finish up our drinks, I notice that it’s getting late."
     mc "You ready to head home?"
+    show s_cafe d# at cgfade
     s "Yeah, sure."
 
 
-    scene bg residential_day(night)
+    scene bg residential_night
     with wipeleft
     "We walk home hand-in-hand."
     "Even though I only recently saw Sayori as more than a friend…"
     "I feel like I always have, and just now realized."
 
-    # show sayori 1@d at t11 zorder 2
-    s 2d1 "Thank you, for a wonderful date."
-    # show sayori 1@d at t11 zorder 2
+    show sayori 1dz at t11 zorder 2
+    s 2z "Thank you, for a wonderful date."
+    show sayori 1dd at t11 zorder 2
     "Something in the way she spoke doesn’t seem right."
     "It’s giving me the same feeling as when she was talking earlier."
     "She’s hiding something from me again."
@@ -465,43 +501,43 @@ Sincerely,
             # {MAKE SURE EVERYTHING IS OK} += 2
             $ SayoriVar2 += 2
             mc "Hey Sayori…"
-            s 1c 1 "Yeah?"
-            # show sayori 1@b at t11 zorder 2
+            s 1dc 1 "Yeah?"
+            show sayori 1db at t11 zorder 2
             mc "Are you sure you had fun?"
-            s 1h "What do you mean?"
-            # show sayori 1@g at t11 zorder 2
+            s 1dh "What do you mean?"
+            show sayori 1dg at t11 zorder 2
             mc "Something about the way you said some things earlier..."
             mc "It didn’t sit right with me."
-            s 1d1 "Don’t worry about me[player]."
+            s 1dz "Don’t worry about me[player]."
             s "I was just nervous was all."
-            # show sayori 1@d at t11 zorder 2
+            show sayori 1dd at t11 zorder 2
             "If there’s one thing I learned about her in the past few weeks of being closer with her, it’s that not everything is as it seems…"
             mc "Tell me what’s really wrong."
-            s 4h "It’s nothing, really."
-            s 4d1 "I promise I was just nervous."
-            # show sayori 4@d at t11 zorder 2
+            s 1dh "It’s nothing, really."   # was 4dh
+            s 1dz "I promise I was just nervous."   # was 4dz
+            show sayori 1dd at t11 zorder 2     # was 4dd
             mc "We both know that’s not true, Sayori."
-            s 1v "Please, just drop it."
-            # show sayori 1@u at t11 zorder 2
+            s 1dv "Please, just drop it."
+            show sayori 1du at t11 zorder 2
             "I can tell through the tone of her voice that whatever it is , she finds it incredibly distressing."
             "I’ll save it for another time."
             mc "I’m sorry, Sayori."
-            # show sayori 1@n at t11 zorder 2
+            show sayori 1dn at t11 zorder 2
             mc "Goodnight, then, I guess."
-            s 4p "No, wait!"
-            s 2d "Can I…"
-            s 2d1 "Stay at your place again, [player]?"
-            # show sayori 1@d at t11 zorder 2
+            s 1dp "No, wait!"   # was 2dp
+            s 1dd "Can I…"  # was 2dd
+            s 1dz "Stay at your place again, [player]?"  # was 2dz
+            show sayori 1dd at t11 zorder 2
             mc "Yeah, sure, just go change into something a bit more comfortable first."
-            s 4r "Okay!"
-            # show sayori 4@q at t11 zorder 2
+            s 1dr "Okay!"   # was 4dr
+            show sayori 1dq at t11 zorder 2   # was 4dq
             mc "Want me to wait for you in your house, my house, or right here?"
-            s 1l "You can wait at your place, I...actually have something to do."
-            s 1c "I’ll be over in like thirty minutes, okay?"
-            # show sayori 1@b at t11 zorder 2
+            s 1dl "You can wait at your place, I...actually have something to do."
+            s 1dc "I’ll be over in like thirty minutes, okay?"
+            show sayori 1db at t11 zorder 2
             mc "Hm? What do you have to do?"
-            s 1l "It’s nothing you have to worry about, I promise."
-            s 4r "See you in a little while, okay?"
+            s 1dl "It’s nothing you have to worry about, I promise."
+            s 1dr "See you in a little while, okay?"    # was 4dr
             "I shrug my shoulders."
             mc "Sure thing. See you."
             show sayori at thide zorder 1
@@ -593,7 +629,7 @@ Sincerely,
 
             "I read the small rulebook pamphlet that’s miraculously still in the box after about a decade and I refresh myself on a few of the rules and relay them to Sayori."
             "I finish reading and look up at her."
-            show sayori 1b at t11 zorder 2
+            show sayori 1bb at t11 zorder 2
             mc "Any questions, Sayo--"
             "I look up at her and see a bit of a saucy expression on her face."
             mc "W-w-why are you looking at me like that?"
@@ -631,52 +667,52 @@ Sincerely,
             "We begin playing Battleship, and true to the rules we’ve established, each time I get a ship sunk, I have to take something off, and every time Sayori loses a ship, she also has to take something off."
             "It ends up being a lot more fun than I expected, and despite the circumstances, the sexuality of the situation kinda gets diffused by how much fun we’re having picking on each other."
             "That is until I notice Sayori has nothing but her bra and panties on, and I sink her aircraft carrier."
-            show sayori 1&x at t11 zorder 2
+            show sayori 1sx at t11 zorder 2
             s "Ehehe~, it’s your choice, [player], what do you wanna see first?"
-            show sayori 1&a at t11 zorder 2
+            show sayori 1sa at t11 zorder 2
             "Sitting here with nothing but my boxer shorts on, I think she can tell I’m getting very excited."
             "I’m really not super sure how to respond."
             "I saw Sayori nude not super long ago, but this level of playfulness starts to take a toll on my male instincts."
             mc "B-b-b-b…"
             "I’m stuttering like an idiot."
-            # s 1&s "Ehehe~! Spit it out!"jungel
+            s 1ss "Ehehe~! Spit it out!"
             mc "Boobs…"
             mc "I MEAN, BRA."
             mc "T-take off your bra, next, please, madame, if you don’t mind."
             s "Pffft, you’re so silly, [player]."
-            # s 4&x "You’ll really get to see how much bigger they’ve gotten!"
-            # s 1&q "As you wish, it’s coming off~!"
+            s 1sx "You’ll really get to see how much bigger they’ve gotten!"    # was 4sx
+            s 1sq "As you wish, it’s coming off~!"
             "Sayori begins to unlatch her bra for my viewing pleasure, but then she stops suddenly."
-            # s 2&c "Oh, but first…"
-            # s 2&x "D8."
-            show sayori 1&a at t11 zorder 2
+            s 1sc "Oh, but first…"    # was 2sc
+            s 1sx "D8." # was 2sx
+            show sayori 1sa at t11 zorder 2
             "..."
             "She sunk my battleship."
             mc "No way, you have to take it off before you make your next move!"
-            # s 1&j "Hey I came up with the game, so I say this is totally within the rules!"
-            show sayori 1&i at t11 zorder 2
+            s 1sj "Hey I came up with the game, so I say this is totally within the rules!"
+            show sayori 1si at t11 zorder 2
             mc "That’s so bogus!"
-            # s 4&s "I’m waitiiiing~!"
+            s 1ss "I’m waitiiiing~!"  # was 4ss
             "Damn, she really got me with this one."
             mc "Fine, you win, congratulations."
-            # show sayori 4&q at t11 zorder 2
+            show sayori 1sq at t11 zorder 2   # was 4sq
             "It finally hits me that now I have to take off my boxers and show Sayori my private parts."
             "Which, admittedly, I don’t necessarily have a problem with, but regardless, this is awkward."
             "I slowly stand up and then look at Sayori, biting her lip waiting for me to proceed."
             "The look on her face is getting me very aroused, and I know I won’t be able to conceal my excitement from Sayori."
             "I rip off the band-aid, so to speak, then pull down my boxers and show Sayori everything."
             "Sayori begins to clap."
-            # s 4&s "Bravo, [player], bravo! He’s glorious! Ahahaha~!"
+            s 1ss "Bravo, [player], bravo! He’s glorious! Ahahaha~!"  # was 4ss
             mc "Well, here we are, then."
             mc "Game’s over."
             mc "I’m naked, you’re almost naked."
             mc "Where do we go from here?"
-            # s 2&a "I think…"
-            # s 2&x "It’s time to do some math."
-            # show sayori 2&a at t11 zorder 2
+            s 1sa "I think…"  # was 2sa
+            s 1sx "It’s time to do some math."    # was 2sx
+            show sayori 1sa at t11 zorder 2   # was 2sa
             mc "What?!?!"
-            # s 1&x "Let’s get dressed again, [player], we got homework to do."
-            show sayori 1&a at t11 zorder 2
+            s 1sx "Let’s get dressed again, [player], we got homework to do."
+            show sayori 1sa at t11 zorder 2
             "..."
             "I hate everything about this."
             "I didn’t even wanna take things too far tonight, but it’s hard to ignore my urges when you’re so close to the light at the end of the tunnel!"
@@ -722,7 +758,7 @@ Sincerely,
             with dissolve_scene_full
 
             "Suddenly, I feel my lips against hers."
-            "But I was the one to pull her in for the kiss this time."#(keep this)
+            "But I was the one to pull her in for the kiss this time." #(keep this)
             "I can feel the passion on her end."
             "I wrap my arms around her and pull her closer."
             "She groans softly, and I can tell she’s enjoying this as much as I am."
@@ -744,9 +780,9 @@ Sincerely,
             $ SayoriVar2 -= 2
             mc "Yeah, no problem…"
             mc "Well then, goodnight, Sayori."
-            # s 2@c "Actually, I was hoping I could stay over at your place tonight…"
-            # show sayori 2@b at t11 zorder 2
-            mc  "Alright then, but let’s stop by your place so you can get changed."
+            s 1dc "Actually, I was hoping I could stay over at your place tonight…"   # was 2dc
+            show sayori 1db at t11 zorder 2   # was 2db
+            mc "Alright then, but let’s stop by your place so you can get changed."
 
 
             scene bg kitchen 
