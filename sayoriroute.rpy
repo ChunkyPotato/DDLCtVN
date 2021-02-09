@@ -1441,8 +1441,8 @@ label sayoriroute:
     show sayori 1bs at face zorder 2
     scene black
     "Sayori runs up and grabs me unexpectedly."
-    show sayori at thide zorder 1
-    hide sayori
+    # show sayori at thide zorder 1
+    # hide sayori
     s "Today's our 6 month anniversarrrry!"
     "Sayori hugs me even harder than before, almost lifting me up."
     "I didn't think she was this strong."

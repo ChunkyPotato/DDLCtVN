@@ -18,6 +18,7 @@ image bg residential_night = "mod_assets/residential_night.jpg"
 
 image sayori 1z = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "mod_assets/Sayonnaise/z.png")
 image sayori 1wink = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "mod_assets/Sayonnaise/swink.png")
+image sayori 1bwink = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "mod_assets/Sayonnaise/sbwink.png")
 
 image sayori 1da = im.Composite((960, 960), (0, 0), "mod_assets/Sayonnaise/1dl.png", (0, 0), "mod_assets/Sayonnaise/1dr.png", (0, 0), "sayori/a.png")
 image sayori 1db = im.Composite((960, 960), (0, 0), "mod_assets/Sayonnaise/1dl.png", (0, 0), "mod_assets/Sayonnaise/1dr.png", (0, 0), "sayori/b.png")
@@ -56,12 +57,15 @@ image sayori 1sx = im.Composite((960, 960), (0, 0), "mod_assets/Sayonnaise/1sl.p
 
 image sayori 2z = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "mod_assets/Sayonnaise/z.png")
 image sayori 2wink = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "mod_assets/Sayonnaise/swink.png")
+image sayori 2bwink = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/2br.png", (0, 0), "mod_assets/Sayonnaise/swink.png")
 
 image sayori 3z = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "mod_assets/Sayonnaise/z.png")
 image sayori 3wink = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "mod_assets/Sayonnaise/swink.png")
+image sayori 3bwink = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/1br.png", (0, 0), "mod_assets/Sayonnaise/swink.png")
 
 image sayori 4z = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "mod_assets/Sayonnaise/z.png")
 image sayori 4wink = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "mod_assets/Sayonnaise/swink.png")
+image sayori 4bwink = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/2br.png", (0, 0), "mod_assets/Sayonnaise/swink.png")
 
 image sayori 7a = "mod_assets/sEnd.png"
 

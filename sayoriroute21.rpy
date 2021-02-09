@@ -232,8 +232,7 @@ I promise it’ll be worth it."""
             s 5a "Sorry."
             mc "It's a place where you can drink hot cocoa."
             s 1m "Oh!"
-            s "I get it now!"
-            show sayori wink at t11 zorder 2
+            s 1wink "I get it now!"
             s 1m "..."
             s 5d "..."
             "She whispers"
@@ -242,7 +241,7 @@ I promise it’ll be worth it."""
             mc "It’s the cafe."
 
         "Upfront":
-            scene bg corridor
+            # scene bg corridor # who put this here and why
             mc "It’s the cafe."
             s 1r "Oh, cool!"
             s 4q "I’ve always thought that was a cute place!"
@@ -351,7 +350,7 @@ Sincerely,
     scene s_cafe_bg
     with dissolve_scene_full
 
-    show s_cafe h
+    show sayori cafe_h
 
     "We head up and take a seat on the terrace, where I think the view will please Sayori."
     "A waitress asks us what we want, I order a caramel latte, and Sayori gets her hot cocoa."
@@ -368,20 +367,20 @@ Sincerely,
             mc "Sayori."
             mc "I think you look nice today."
             mc "It means a lot that you dressed up and everything for this."
-            show s_cafe d# at cgfade
+            show sayori cafe_d# at cgfade
             s "Awww, thanks."
             s "Since this is technically our first date, I wanted it to be special."
             s "That’s why I decided to wear this old thing."
-            show s_cafe l# at cgfade
+            show sayori cafe_l# at cgfade
             s "I haven’t worn it since the Homecoming incident."
             mc "Homecoming incident?"
             "What does she mean by -"
             "{i}Oh.{/i}"
             "{i}That.{/i}"
             "I still have no idea how they were able to get a live squid in there…"
-            show s_cafe d# at cgfade
+            show sayori cafe_d# at cgfade
             s "I also convinced Yuri to give me some exotic perfume she never used."
-            show s_cafe w# at cgfade
+            show sayori cafe_w# at cgfade
             s "She’s really into aromatherapy or something, and said this stuff would be perfect for a date."
             s "I think it was called Jazz Man?"
 
@@ -389,17 +388,17 @@ Sincerely,
             # {NORMAL} += 0
             "I take a light whiff of the air."
             mc "Sayori?"
-            show s_cafe d# at cgfade
+            show sayori cafe_d# at cgfade
             s "Yes, [player]?"
             mc "Did you put on perfume for this?"
-            show s_cafe l# at cgfade
+            show sayori cafe_l# at cgfade
             s "Haha, yeah, I did."
-            show s_cafe d# at cgfade
+            show sayori cafe_d# at cgfade
             s "I thought it was appropriate for the occasion."
             s "And I wanted to try out a perfume Yuri gave me."
             s "She told me she never got to try it out, and just gave it to me!"
             s "She said it was some exotic flower."
-            show s_cafe h# at cgfade
+            show sayori cafe_h# at cgfade
             s "Jazz man, or something like that?"
 
         "Observant":
@@ -409,25 +408,25 @@ Sincerely,
             "I smell an unfamiliar scent in the air, it seems to be coming off of Sayori."
             "*sniff *"
             mc "You smell different than usual today Sayori, is that a new perfume?"
-            show s_cafe s# at cgfade
+            show sayori cafe_s# at cgfade
             s "Umm, what?"
-            show s_cafe l# at cgfade
+            show sayori cafe_l# at cgfade
             s "Yes...Yuri gave me one…"
             mc "Oh…"
-            show s_cafe s# at cgfade
+            show sayori cafe_s# at cgfade
             s "Wait, have you memorized my ‘normal’ smell?"
             mc "Umm…"
-            show s_cafe d# at cgfade
+            show sayori cafe_d# at cgfade
             "Sayori laughs awkwardly"
-            show s_cafe h# at cgfade
+            show sayori cafe_h# at cgfade
             s "It’s okay, it’s nice that you have this attention to detail."
             mc "What’s the scent?"
-            show s_cafe l# at cgfade
+            show sayori cafe_l# at cgfade
             s "Yuri said something about a jazz man?"
             mc "Jasmine?"
             s "Yeah, that!"
     
-    show s_cafe h# at cgfade
+    show sayori cafe_h# at cgfade
     s "So."
     s "Do you like it?"
     mc "Yeah, it suits you well."
@@ -435,36 +434,36 @@ Sincerely,
     
 
     if observant_s21:
-        show s_cafe l# at cgfade
+        show sayori cafe_l# at cgfade
         s "Thanks, ehehe…"
         "Thankfully, the waitress breaks the awkward conversation by arriving with our drinks."
     else:
-        show s_cafe w# at cgfade
+        show sayori cafe_w# at cgfade
         s "Thanks, ehehe…"
-        show s_cafe s# at cgfade
+        show sayori cafe_s# at cgfade
         "Soon after, the waitress arrives with our drinks."
     
     mc "So how’s your day going?"
-    show s_cafe d# at cgfade
+    show sayori cafe_d# at cgfade
     s "My day was great!"
     "Something about the way she said that…"
     "I don’t want to pursue it, for fear of ruining the moment."
     s "I’ve been waiting for this all day!"
-    show s_cafe h# at cgfade
+    show sayori cafe_h# at cgfade
     mc "Me too."
     "I grasp for a topic to keep conversation from stalling."
     mc "Do you remember the day you first introduced me to the literature club?"
-    show s_cafe l# at cgfade
+    show sayori cafe_l# at cgfade
     s "Yeah, it seems so long ago, doesn’t it?"
     mc "It sure does."
-    show s_cafe h# at cgfade
+    show sayori cafe_h# at cgfade
     "We sit in silence for a moment."
     mc "Back then, "
     mc "Did you think we’d end up in this relationship?"
-    show s_cafe s# at cgfade
+    show sayori cafe_s# at cgfade
     s "Honestly, I thought you were probably going to end up with Monika or Yuri."
     s "But ever since we started dating…"
-    show s_cafe h# at cgfade
+    show sayori cafe_h# at cgfade
     s "Those rainclouds haven’t been looking so dark lately…"
 
 
@@ -473,11 +472,11 @@ Sincerely,
 
     #wouldn’t it be better to fade for this <-- yes (was wipeleft)
 
-    show s_cafe h# at cgfade
+    show sayori cafe_h# at cgfade
 
     "As we finish up our drinks, I notice that it’s getting late."
     mc "You ready to head home?"
-    show s_cafe d# at cgfade
+    show sayori cafe_d# at cgfade
     s "Yeah, sure."
 
 
@@ -488,7 +487,7 @@ Sincerely,
     "I feel like I always have, and just now realized."
 
     show sayori 1dz at t11 zorder 2
-    s 2z "Thank you, for a wonderful date."
+    s 1dz "Thank you, for a wonderful date."    # was 2dz
     show sayori 1dd at t11 zorder 2
     "Something in the way she spoke doesn’t seem right."
     "It’s giving me the same feeling as when she was talking earlier."
@@ -545,7 +544,7 @@ Sincerely,
 
 
             scene bg bedroom
-            with wiperight
+            with wipeleft
 
             "I wait about a half hour before Sayori enters my house like any other Sunday."
             show sayori 1br at t11 zorder 1
@@ -793,14 +792,14 @@ Sincerely,
             "I notice Sayori holding a strange red bag in her arm."
             mc "So, what’s in the bag, Sayori?"
             s 2bx "It’s a secret."
-            show sayori wink at t11 zorder 2
+            show sayori 2bwink at t11 zorder 2
             s "For now."
             "As usual, that wink makes me feel like I’m standing on the Sun."
             show sayori 1ba at t11 zorder 2
 
 
             scene bg bedroom
-            with wiperight
+            with wipeleft
 
             show sayori 1ba at t11 zorder 2
             mc "Alright then, you ready for bed?"
