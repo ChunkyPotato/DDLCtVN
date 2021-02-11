@@ -1,8 +1,4 @@
 # Sayori Cafe (s21)
-image s_cafe_bg:
-    "mod_assets/Sayonnaise/s_cafe.png"      #cafe base
-image s_cafe_bg2:
-    "mod_assets/Sayonnaise/s_cafe_2.png"    #cafe base sundown
 
 image sayori cafe_d:
     "mod_assets/Sayonnaise/s_cafe_d.png"    #happy/mouth open

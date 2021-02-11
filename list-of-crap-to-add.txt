@@ -25,17 +25,9 @@ bg(unused house)
         302
         316
 
-bg residential_day(night)
-    Sayo 21
-        427
-
 
 
 CG:
-
-cg Sayori Custom(Afternoon)
-    Sayo 21
-        464
 
 cg bed sayori
     Sayo 22
@@ -46,19 +38,14 @@ cg bed sayori
 
 SPRITES:
 
-sayori 1X(custom)
-    Sayo 21
-        317 1a
-        321 1q
-        324 1a
-
 sayori X@X      # Sayori in a dress for a date.
     Sayo 21
+        350-355
         From 433
 
 sayori 5bX
     Sayo 21
-        From 591
+        From 599
 
 sayori X&X      # Sayori playing strip battleship.
     Sayo 21
@@ -79,3 +66,11 @@ s(worried)      # Worried face on custom CG
 cg custom Sayori
     Sayo 21
         328
+
+bg residential_day(night)
+    Sayo 21
+        427
+
+cg Sayori Custom(Afternoon)
+    Sayo 21
+        464

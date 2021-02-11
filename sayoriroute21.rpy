@@ -331,40 +331,37 @@ Sincerely,
 
 
     # TODO: Add transition and fix bg house
-    scene bg(unused house)
+    scene bg cafe
     with wipeleft
-    play music t2
 
+    "I arrive at the cafe, which used to be a house, but was bought and repurposed..."
     "As I wait for Sayori, I find myself wondering why she wanted extra time to get ready."
-    "I also realize that this is our first \"official\" date, since the festival didn’t turn out too well, and I don’t count her coming to my place every Sunday as dates."
+    "I also realize that this is our first \"official\" date, since the festival didn’t turn out too well."
+    "Of course, I don’t count her coming to my place every Sunday as dates."
+    "As I lose myself in thought, I’m suddenly jolted back to reality{nw}"
 
-
-    scene black
-    with dissolve_scene_full
-
-    "As I lose myself in thought, I’m suddenly jolted back to reality as a pair of hands cover my eyes from behind."
+    show black at quickease
+    "As I lose myself in thought, I’m suddenly jolted back to reality{fast} as a pair of hands cover my eyes from behind."
     s "Guess whooo?"
     mc "I know it’s you, Sayori."
-
-
-    # TODO: Add transition and fix bg house
-    scene bg house(unused)
+    hide black
 
     show sayori 1da at t11 zorder 2
+    play music t8
+
     s "So, how do I look?"
     mc "You look amazing."
     s 1dq "Really? I’m so glad!"
     mc "So should we head in?"
     s 1da "Yeah, let’s go!"
-    "We head into the cafe, which used to be a house, but was bought and repurposed.."
+    "We head into the cafe and take a seat inside."
 
 
-    scene s_cafe_bg
+    scene bg cafe_in
     with dissolve_scene_full
 
-    show sayori cafe_h
+    show sayori cafe_h at cgfade
 
-    "We head up and take a seat on the terrace, where I think the view will please Sayori."
     "A waitress asks us what we want, I order a caramel latte, and Sayori gets her hot cocoa."
     "I try to think of something to say while we wait for our drinks, but nothing comes to mind."    
     "Weird, I never had a problem talking to Sayori before."
@@ -479,12 +476,11 @@ Sincerely,
     s "Those rainclouds haven’t been looking so dark lately…"
 
 
-    scene s_cafe_bg2
+    scene bg cafe_in_night
+    show sayori cafe_h# at cgfade
     with fade
 
     #wouldn’t it be better to fade for this <-- yes (was wipeleft)
-
-    show sayori cafe_h# at cgfade
 
     "As we finish up our drinks, I notice that it’s getting late."
     mc "You ready to head home?"
@@ -493,7 +489,7 @@ Sincerely,
 
 
     scene bg residential_night
-    with wipeleft
+    with wipeleft_scene
     "We walk home hand-in-hand."
     "Even though I only recently saw Sayori as more than a friend…"
     "I feel like I always have, and just now realized."
@@ -501,6 +497,7 @@ Sincerely,
     show sayori 1dz at t11 zorder 2
     s 1dz "Thank you, for a wonderful date."    # was 2dz
     show sayori 1dd at t11 zorder 2
+    stop music fadeout 4.0
     "Something in the way she spoke doesn’t seem right."
     "It’s giving me the same feeling as when she was talking earlier."
     "She’s hiding something from me again."
@@ -515,6 +512,9 @@ Sincerely,
             s 1dc 1 "Yeah?"
             show sayori 1db at t11 zorder 2
             mc "Are you sure you had fun?"
+
+            play music t9
+
             s 1dh "What do you mean?"
             show sayori 1dg at t11 zorder 2
             mc "Something about the way you said some things earlier..."
@@ -551,15 +551,17 @@ Sincerely,
             s 1dr "See you in a little while, okay?"    # was 4dr
             "I shrug my shoulders."
             mc "Sure thing. See you."
+            stop music fadeout 1.5
             show sayori at thide zorder 1
             hide sayori
 
 
             scene bg bedroom
-            with wipeleft
+            with wipeleft_scene
 
             "I wait about a half hour before Sayori enters my house like any other Sunday."
             show sayori 1br at t11 zorder 1
+            play music t5_sayori
             s "Hey, [player]!"
             show sayori 1bq at t11 zorder 2
             "And she has a mysterious bag with her?"
@@ -576,7 +578,8 @@ Sincerely,
             s 1bc "Math, naturally."
             show sayori 1bb at t11 zorder 2
             "{i}Where’s the nearest cliff?{/i}"
-            s 1bc "I actually got a lot of it done in class, but there’s this one that’s been tripping me up, I hope we can put our heads together to figure it out."
+            s 1bc "I actually got a lot of it done in class, but there’s this one that’s been tripping me up."
+            s "I hope we can put our heads together to figure it out."
             "I sigh involuntarily."
             show sayori 1bb at t11 zorder 2
             mc "Alright, let’s see...number 22...the square root of x over 2 plus 4 equals the cube root of 2x plus 8…"
@@ -628,29 +631,34 @@ Sincerely,
             s 4bm "[player], are you alright?!"
             show sayori 4bn at t11 zorder 2
             mc "Y-yeah, I’m fine, this closet was just never meant to be opened or interacted with by humankind."
-            "Regaining my balance I decide to brute force everything, and in one swift motion rise to the top of the closet and grab the Battleship box, which was luckily on the very top of the stack of games."
-            mc "Yes, got it!"
+            "Regaining my balance, I decide to brute force everything."
+            "In one swift motion, I rise to the top of the closet and grab the Battleship box, which was luckily on the very top of the stack of games."
+            mc "Yes! Got it!"
             s 1br "Good job!"
             show sayori 1bq at t11 zorder 2
-            "Sayori and I sit on the floor of my bedroom, then I open the game and sort out all the pieces. Sayori wants to be red so I take the blue pieces."
+            "Sayori and I sit on the floor of my bedroom, then I open the game and sort out all the pieces."
+            "Sayori wants to be red, so I take the blue pieces."
             
             
             scene bg bedroom
             with wipeleft_scene
 
-            "I read the small rulebook pamphlet that’s miraculously still in the box after about a decade and I refresh myself on a few of the rules and relay them to Sayori."
-            "I finish reading and look up at her."
+            "I read the small rulebook pamphlet, which is miraculously still in the box after about a decade."
+            "As I refresh myself on a few of the rules, I relay them to Sayori."
+            "When I finish reading, I look up at her."
             show sayori 1bb at t11 zorder 2
             mc "Any questions, Sayo--"
+            stop music fadeout 4.0
             "I look up at her and see a bit of a saucy expression on her face."
             mc "W-w-why are you looking at me like that?"
-            s "I have an idea."
+            s 1bc "I have an idea."
             "{i}I’m almost too nervous to ask…{/i}"
             s 1bl "So, I know that you didn’t wanna...you know...earlier, but…"
             s 5ba "I was thinking that we could make this game a little bit more interesting?"
             mc "Define…{i}interesting{/i}."
-            s 5b "Well...I was thinking that maybe...after every time we each sink one of each other’s boats…"
-            s 5bb "We could take off an article of clothing?"
+            s 5bb "Well...I was thinking that maybe...after every time we each sink one of each other’s boats…"
+            play music t7
+            s 5bd "We could take off an article of clothing?"
             "..."
             "I don’t have the mental capacity to fully register this suggestion."
             mc "Y-you mean like...strip poker?"
@@ -675,8 +683,11 @@ Sincerely,
             scene bg bedroom
             with wipeleft_scene
 
-            "We begin playing Battleship, and true to the rules we’ve established, each time I get a ship sunk, I have to take something off, and every time Sayori loses a ship, she also has to take something off."
-            "It ends up being a lot more fun than I expected, and despite the circumstances, the sexuality of the situation kinda gets diffused by how much fun we’re having picking on each other."
+            "We begin playing Battleship."
+            "True to the rules we’ve established, each time I get a ship sunk, I take something off."
+            "And every time Sayori loses a ship, she also takes something off"
+            "It ends up being a lot more fun than I expected!"
+            "Despite the circumstances, the sexuality of the situation kinda gets diffused by how much fun we have picking on each other."
             "That is until I notice Sayori has nothing but her bra and panties on, and I sink her aircraft carrier."
             show sayori 1sx at t11 zorder 2
             s "Ehehe~, it’s your choice, [player], what do you wanna see first?"
@@ -729,21 +740,26 @@ Sincerely,
             "I didn’t even wanna take things too far tonight, but it’s hard to ignore my urges when you’re so close to the light at the end of the tunnel!"
             "Well, I guess she’s right."
             "Better just suck it up and accept defeat like a man."
+            stop music fadeout 1.5
             $ battleship_played=True
 
 
             scene bg bedroom
             with wipeleft_scene
+            play music t5_sayori
 
             "A couple of hours go by, and Sayori and I have mercifully completed a majority of the math homework we needed to finish."
             "{i}You wouldn’t believe how much doing math completely kills your sex drive{/i}."
-            "She and I make some instant meals together and eat them by candlelight that evening, then eventually end up in bed at around 10: 30, as I let the TV in my room run to lull us to sleep."
+            "She and I make some instant meals together and eat them by candlelight that evening."
+            "Eventually, we end up in bed at around 10: 30, as I let the TV in my room run to lull us to sleep."
             mc "You ready to call it a night, Sayori?"
-            s 1bh "No, not yet."
+            stop music fadeout 6.0
+            show sayori 1bh at t11 zorder 2
+            s "No, not yet."
             s "I needed to say some stuff first."
             s 1bk "You were right."
             "I knew it…"
-            mc "Sayo -"
+            mc "Sayo--"
             s 1bf "Please."
             s "..."
             s 1bg "I just…"
@@ -755,6 +771,7 @@ Sincerely,
             mc "You aren’t a burden."
             mc "If I was in any way unhappy with us being in a relationship, I wouldn’t be here."
             mc "Trust me."
+            play music t10
             mc "I love you."
             "Even though I’m not yet used to saying that to Sayori.."
             "It feels right."
@@ -785,10 +802,11 @@ Sincerely,
             "I have a strange feeling about this…"
             mc "Yeah, that was…"
             mc "Special."
+            stop music fadeout 2.0
 
         "Say goodnight":
             # {SAY GOODNIGHT} -= 2
-            $ SayoriVar2 -= 2
+            $ SayoriVar2 -= 21
             mc "Yeah, no problem…"
             mc "Well then, goodnight, Sayori."
             s 1dc "Actually, I was hoping I could stay over at your place tonight…"   # was 2dc
@@ -798,6 +816,7 @@ Sincerely,
 
             scene bg kitchen 
             with wipeleft_scene
+            play music t5_sayori
 
             show sayori 1ba at t11 zorder 2
             "Once Sayori is done changing, we head back to my house."
@@ -819,3 +838,4 @@ Sincerely,
             mc "You can have the bed, I’ll take the couch."
             s 1bc "Why don’t we just share the bed?"
             mc "Uh, yeah. Sure"
+            stop music fadeout 2.0
